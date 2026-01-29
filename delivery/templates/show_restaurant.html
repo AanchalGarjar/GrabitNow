@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="show-restaurants-container">
+    <h1>Restaurants that you may like...</h1>
+        <table border="1">
+        <thead>
+            <tr>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>Cuisine</th>
+                <th>Rating</th>
+                <th>Other Operations</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!--inorder to store the data inside the table we need to loop through it using for loop-->
+            {% for restaurant in restaurants %}
+            <tr>
+                <td>
+                    <img src="{{ restaurant.picture }}" alt="Picture of {{ restaurant.name }}" width="200">
+                </td>
+                <td>{{ restaurant.name }}</td>
+                <td>{{ restaurant.cuisine }}</td>
+                <td>{{ restaurant.rating }}/5</td>
+                <td>
+                    <!-- <a href="{% url 'open_update_restaurant' restaurant.id %}">Update Restaurant</a> -->
+                    <form method="post" action="{% url 'open_update_restaurant' restaurant.id %}" style="display: inline;">
+                        {%  csrf_token %}
+                        <button type="submit">Update Restaurant</button>
+                    </form>
+                    <br>
+
+                    <br>
+                    <form method="post" action="{% url 'delete_restaurant' restaurant.id %}" style="display: inline;">
+                        {%  csrf_token %}
+                        <button type="submit">Delete Restaurant</button>
+                    </form>
+                    <!-- <a href="#">delete Restaurant</a> -->
+                    <br><br>
+                    <form method="get" action="{% url 'open_update_menu' restaurant.id %}" style="display: inline;">
+    <button type="submit">Update Menu</button>
+</form>
+
+                    <!-- <a href="{% url 'open_update_menu' restaurant.id %}">Updated Menu</a> -->
+                    <br>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
+
+
+
+

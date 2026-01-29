@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="signup-container">
+    <h2>Sign Up</h2>
+    <!--action will take the data that we sign up and go to the sign in page and after going it to the next page we use it-->
+    <form method="post" action="{% url 'signup' %}"> <!--post method it will masks(data will not be visible in url) the data-->
+        {% csrf_token %} <!--it will convert our data into token and prevent it from hacker (Cross-Site Request Forgery)-->
+    
+        <label for="name">Name</label>
+<input type="text" id="name" name="username">
+
+
+<label for="password">Password</label>
+<input type="password" id="password" name="password">
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email">
+
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone">
+
+
+<label for="address">Address</label>
+<textarea id="address" name="address" rows="4" cols="30" required></textarea>
+
+
+<input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

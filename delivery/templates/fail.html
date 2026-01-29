@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Document</title>
+   <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #f3de92; /* light red background */
+            height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .login-failed-box {
+            text-align: left;
+        }
+
+        .login-failed-box h1 {
+            color: #dc3545; /* dark red for the message */
+            font-size: 1.8rem;
+            margin: 0 0 10px 0;
+        }
+
+        .login-failed-box a {
+            display: inline-block;
+            color: #dc3545;
+            text-decoration: underline;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .login-failed-box a:hover {
+            color: #a71d2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-failed-box">
+    <h1 style="color: red;">Login failed!!!</h1>
+    <a href="{% url 'signin' %}">Sign in again</a>
+    </div>
+</body>
+</html>

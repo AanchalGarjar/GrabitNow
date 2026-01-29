@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <title>customer menu</title>
+
+<style>
+    .customer-home-container button {
+    background-color: #ffb347;
+    color: white;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.customer-home-container button:hover {
+    background-color: #ff9800;
+    transform: translateY(-2px);
+}
+</style>
+</head>
+<body class="customer-menu-container">
+  
+ <img src = "{{restaurant.picture}}" alt="{{restaurant.name}}" width="200">
+  <h1>Menu for {{restaurant.name}}</h1>
+  <h3>Cuisine: {{restaurant.cuisine}}</h3>
+
+  <table border="1">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Type</th>
+                <th>Cart</th>
+            </tr>
+        </thead>
+
+  <tbody>
+            <!--inorder to store the data inside the table we need to loop through it using for loop-->
+            {% for item in itemList %}
+            <tr>
+                <td>
+                    <img src="{{ item.picture }}" alt="Picture of {{ item.name }}" width="200">
+                </td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.price }}</td>
+                <td>{% if item.is_veg %}
+                        Veg
+                        {% else %}
+                        Non-Veg
+                        {% endif %}
+                </td><td>
+               <form method="post" action="{% url 'add_to_cart' item.id username %}" onsubmit="addToCart(event, this);">
+    {% csrf_token %}
+    <input type="submit" value="Add to Cart" class="add-btn">
+</form>
+
+
+
+                </td>
+                </tr>
+                {% empty %}
+                <tr>
+                  <td colspan="6">No menu items yet.</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{% url 'show_cart' username %}"> Go to Cart</a>
+
+    <script>
+function addToCart(event, form) {
+    event.preventDefault();  // stop page reload
+
+    fetch(form.action, {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': form.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("✅ Item added to cart!");
+        } else {
+            alert("❌ Failed to add item. Try again.");
+        }
+    })
+    .catch(() => alert("❌ Something went wrong."));
+}
+</script>
+
+
+</body>
+</html>

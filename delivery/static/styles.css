@@ -1,0 +1,1002 @@
+/* ===== Welcome Page Styling ===== */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#f7e26b, #f8b84e);
+    color: #fff;
+    text-align: center;
+}
+
+.welcome-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    color:whitesmoke;
+}
+
+.welcome-container a {
+    background-color: #fff;
+    color: #6a7cf7;
+    padding: 12px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.welcome-container a:hover {
+    background-color: #e8ebff;
+    transform: translateY(-3px);
+}
+
+/* ===== Sign In Page Styling ===== */
+.signin-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#f7e26b, #f8b84e);
+    color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+.signin-container h2 {
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    font-size: 22PX;
+    margin-bottom: 30px;
+    color:#186f86;
+}
+
+.signin-container form {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+}
+
+.signin-container label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+    align-self: flex-start;
+}
+
+.signin-container input[type="text"],
+.signin-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signin-container input[type="text"]:focus,
+.signin-container input[type="password"]:focus {
+    border-color: #6a7cf7;
+    box-shadow: 0 0 5px rgba(106, 124, 247, 0.5);
+    outline: none;
+}
+
+.signin-container input[type="submit"] {
+    background-color: #ffb347;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signin-container input[type="submit"]:hover {
+    background-color: #ff9800;
+    transform: translateY(-2px);
+}
+
+/* ===== Sign Up Page Styling ===== */
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7e26b, #f8b84e);
+    color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+.signup-container h2 {
+    color:#186f86;
+    font-size: 20px;
+    margin-bottom: 20px;
+     text-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.signup-container form {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
+}
+
+.signup-container label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+    align-self: flex-start;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"],
+.signup-container input[type="tel"],
+.signup-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-container input:focus,
+.signup-container textarea:focus {
+    border-color: #ffb347;
+    box-shadow: 0 0 5px rgba(255, 179, 71, 0.5);
+    outline: none;
+}
+
+.signup-container input[type="submit"] {
+    background-color: #ffb347;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-container input[type="submit"]:hover {
+    background-color: #ff9800;
+    transform: translateY(-2px);
+}
+
+/* ===== Add Restaurant Page Styling ===== */
+.add-restaurant-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+.add-restaurant-container h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.add-restaurant-container form {
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+
+.add-restaurant-container label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+    align-self: flex-start;
+}
+
+.add-restaurant-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-restaurant-container input:focus {
+    border-color: #2193b0;
+    box-shadow: 0 0 5px rgba(33, 147, 176, 0.5);
+    outline: none;
+}
+
+.add-restaurant-container button {
+    background-color: #2193b0;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-restaurant-container button:hover {
+    background-color: #186f86;
+    transform: translateY(-2px);
+}
+
+/* ===== Shared small responsive tweaks ===== */
+@media (max-width: 600px) {
+    .signin-container form,
+    .signup-container form,
+    .add-restaurant-container form {
+        width: 90%;
+        padding: 25px;
+    }
+}
+
+/* ===== Admin Home Page Styling ===== */
+.admin-home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a5dfed, #14738b);
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.admin-home-container h1 {
+    color: #d2f8f8;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons styled as links */
+.admin-home-container a {
+    background-color: white;
+    color: #186f86;
+    padding: 12px 30px;
+    margin: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.admin-home-container a:hover {
+    background-color: #e8ebff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .admin-home-container h1 {
+        font-size: 2rem;
+    }
+
+    .admin-home-container a {
+        width: 80%;
+        padding: 10px 0;
+        font-size: 0.95rem;
+    }
+}
+
+/* ===== Show Restaurants Page Styling ===== */
+.show-restaurants-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a5dfed, #14738b);
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    padding: 40px;
+}
+
+.show-restaurants-container h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Table styling */
+.show-restaurants-container table {
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.show-restaurants-container th, 
+.show-restaurants-container td {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.show-restaurants-container th {
+    background-color: #ffe082;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Alternate row colors */
+.show-restaurants-container tbody tr:nth-child(even) {
+    background-color: rgb(238, 246, 248); /* Light orange shade */
+}
+
+.show-restaurants-container tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White */
+}
+
+/* Row hover effect */
+.show-restaurants-container tbody tr:hover {
+    background-color: #ffefb0;
+    transition: background-color 0.3s ease;
+}
+
+/* Buttons inside table */
+.show-restaurants-container button {
+    background-color: #ffb347;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.show-restaurants-container button:hover {
+    background-color: #ff9800;
+    transform: translateY(-2px);
+}
+
+/* Restaurant images */
+.show-restaurants-container img {
+    border-radius: 10px;
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Display Restaurants Page Styling ===== */
+.display-restaurants-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a5dfed, #14738b);
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    padding: 40px 20px;
+}
+
+/* Heading */
+.display-restaurants-container h1 {
+    color: white;
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* Table styling */
+.display-restaurants-container table {
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Header */
+.display-restaurants-container th {
+    background-color: #ffb347;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Table Cells */
+.display-restaurants-container td {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+/* Alternate row colors */
+.display-restaurants-container tbody tr:nth-child(even) {
+     background-color: rgb(238, 246, 248);
+}
+.display-restaurants-container tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Hover effect */
+.display-restaurants-container tbody tr:hover {
+    background-color: #ffe082;
+    transition: background-color 0.3s ease;
+}
+
+/* Buttons */
+.display-restaurants-container button {
+    background-color: #ffb347;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.display-restaurants-container button:hover {
+    background-color: #ff9800;
+    transform: translateY(-2px);
+}
+
+/* Images */
+.display-restaurants-container img {
+    border-radius: 10px;
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .display-restaurants-container table {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .display-restaurants-container img {
+        width: 90px;
+        height: 60px;
+    }
+
+    .display-restaurants-container h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* ===== Customer Menu Page Styling ===== */
+.customer-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f3da80, #ecbdbe);
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    padding: 40px 20px;
+}
+
+/* Headings */
+.customer-menu-container h1 {
+    color: #186f86;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.customer-menu-container h3 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Go to Cart Link */
+.customer-menu-container a {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 25px;
+    margin: 10px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.customer-menu-container a:hover {
+    background-color: #f57c00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* Table Styling */
+.customer-menu-container table {
+    width: 95%;
+    max-width: 1100px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.customer-menu-container th, 
+.customer-menu-container td {
+    text-align: center;
+    padding: 18px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.customer-menu-container th {
+    background-color: #ffe082;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.customer-menu-container tbody tr:nth-child(even) {
+    background-color: #fff8e1;
+}
+
+.customer-menu-container tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.customer-menu-container tbody tr:hover {
+    background-color: #ffefb0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Images */
+.customer-menu-container > img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.customer-menu-container table img {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Add to Cart Button */
+input.add-btn {
+    background-color: #ff9800 !important;
+    color: white !important;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+input.add-btn:hover {
+    background-color: #f57c00 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .customer-menu-container table {
+        width: 100%;
+    }
+
+    .customer-menu-container table img {
+        width: 120px;
+        height: 80px;
+    }
+
+    .customer-menu-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .customer-menu-container h3 {
+           font-size: 1rem;
+    }
+}
+
+/* ===== Customer Home Page Styling ===== */
+.customer-home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f3da80, #ecbdbe);
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    padding: 40px 20px;
+}
+
+.customer-home-container h1 {
+    color: #186f86;
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+.customer-home-container h2 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Table Styling */
+.customer-home-container table {
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.customer-home-container th, 
+.customer-home-container td {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.customer-home-container th {
+    background-color: #146c98;
+    color: whitesmoke;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.customer-home-container tbody tr:nth-child(even) {
+    background-color:  #fff8e1;
+}
+
+.customer-home-container tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.customer-home-container tbody tr:hover {
+    background-color: #e1f4ff;
+    transition: background-color 0.3s ease;
+}
+
+/* Restaurant Image Styling */
+.customer-home-container img {
+    border-radius: 10px;
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .customer-home-container table {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .customer-home-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .customer-home-container img {
+        width: 90px;
+        height: 70px;
+    }
+}
+
+
+/* ===== Add Item Page Styling ===== */
+.add-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+     background: linear-gradient(135deg, #a5dfed, #14738b);
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    padding: 40px 20px;
+}
+
+/* Heading */
+.add-item-container h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+}
+
+.add-item-container h1 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+}
+
+.add-item-container h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+.add-item-container form {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-bottom: 40px;
+}
+
+.add-item-container label {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.add-item-container input[type="text"],
+.add-item-container input[type="number"],
+.add-item-container input[type="url"],
+.add-item-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-item-container input:focus,
+.add-item-container textarea:focus {
+    border-color: #f8b84e;
+    box-shadow: 0 0 5px rgba(248, 184, 78, 0.5);
+    outline: none;
+}
+
+/* Checkbox styling */
+.add-item-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Button styling */
+/* Add Item Button Styling */
+.add-item-container button {
+    background-color: #2193b0; /* blue color */
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-item-container button:hover {
+    background-color: #186f86; /* darker blue on hover */
+    transform: translateY(-2px);
+}
+
+
+/* Restaurant image */
+.add-item-container img {
+    margin: 20px 0;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Table Styling */
+.add-item-container table {
+    width: 95%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+.add-item-container th,
+.add-item-container td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.add-item-container th {
+    background-color: #ffb347;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.add-item-container tbody tr:nth-child(even) {
+    background-color: #fff8e1;
+}
+
+.add-item-container tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.add-item-container tbody tr:hover {
+    background-color: #ffefb0;
+    transition: background-color 0.3s ease;
+}
+
+.add-item-container td img {
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .add-item-container form {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .add-item-container table {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .add-item-container td img {
+        width: 100px;
+        height: 70px;
+    }
+}
+
+/* ===== View Menu Button Styling ===== */
+.customer-home-container button {
+    background-color: #2193b0;      /* Nice blue color */
+    color: white;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.customer-home-container button:hover {
+    background-color: #186f86;      /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== Thank You Page Styling ===== */
+.thank-you-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7e26b, #f8b84e);
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Heading */
+.thank-you-container h1 {
+    font-size: 2.5rem;
+    color: #186f86;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.thank-you-container h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Paragraph */
+.thank-you-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Back to Home Button / Link */
+.thank-you-container a {
+    background-color: #2193b0; /* blue button */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.thank-you-container a:hover {
+    background-color: #186f86;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .thank-you-container h1 {
+        font-size: 2rem;
+    }
+    .thank-you-container h2 {
+        font-size: 1.5rem;
+    }
+    .thank-you-container p {
+        font-size: 1rem;
+    }
+}

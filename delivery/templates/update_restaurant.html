@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Update Menu</title>
+    <style>
+        /* ===== Update Menu Page Styling ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #a5dfed, #14738b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+form h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #f39c12;
+    box-shadow: 0 0 5px rgba(243,156,18,0.5);
+    outline: none;
+}
+
+button {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #e67e22;
+    box-shadow: 0 5px 15px rgba(230,126,34,0.3);
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form method="post" action="{% url 'update_restaurant' restaurant.id %}">
+            {% csrf_token %}
+            <h1>Update Menu</h1>
+
+            <label for="name">Restaurant Name:</label>
+            <input type="text" id="name" name="name" value="{{ restaurant.name }}">
+
+            <label for="picture">Picture URL:</label>
+            <input type="url" id="picture" name="picture" value="{{ restaurant.picture }}">
+
+            <label for="cuisine">Cuisine:</label>
+            <input type="text" id="cuisine" name="cuisine" value="{{ restaurant.cuisine }}">
+
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" step="0.1" min="0" max="5" value="{{ restaurant.rating }}">
+
+            <button type="submit">Update Restaurant</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>add Restaurant page</title>
+</head>
+<body>
+    <div class="add-restaurant-container">
+    <h2>Add Restaurant</h2>
+    <form method="post" action="{% url 'add_restaurant' %}">
+        {% csrf_token %}
+        <label for="name">Restaurant Name: </label>
+        <input type="text" id = "name" name = "name" required>
+
+        <label for="picture">Picture URL: </label>
+        <input type="url" id = "picture" name = "picture" required>
+
+        <label for="cuisine">Cuisine: </label>
+        <input type="text" id = "cuisine" name = "cuisine" required>
+
+        <label for="rating">Rating: </label>
+        <input type="number" id = "rating" name = "rating" step="0.1" min="0" max="5" required>
+
+        <button type ="submit">Add Restaurant</button>
+    </form>
+    </div>
+</body>
+</html>

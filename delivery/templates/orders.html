@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Document</title>
+</head>
+<body>       
+    <div class="thank-you-container">                               
+    <h1>Thank you for your order, {{ username }}</h1>
+
+    <h2>Delivery Address</h2>
+    <p>{{ customer.address }}</p>   
+
+    <p>Your cart will be delivered to this location shorly Thank you for choosing Grabit!!</p>
+
+    {% if cart_items %}
+<a href="{% url 'open_view_menu' cart_items.0.restaurant.id %}">Back to Menu</a>
+{% else %}
+<a href="{% url 'open_show_restaurant' %}">Back to Home</a>
+{% endif %}
+
+    </div> 
+</body>
+</html>
